@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-abbr",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Use remark-abbr to add abbreviations support to gatsby-remark",
   "main": "index.js",
   "repository": "https://github.com/Calyhre/gatsby-remark-abbr.git",
