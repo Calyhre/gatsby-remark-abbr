@@ -50,8 +50,13 @@ And it'll be converted to:
       };
   ```
 
-3. Delete cache and reboot gatsby
+3. Delete `.cache/` and reboot `gatsby`
 4. You can now enjoy markdown abbreviation syntax 🎉
+
+
+## Todo:
+
+Currently, [some code](src/index.js#L4-L57) is duplicated between [remark-abbr] and this plugin. I haven't figured it out yet how to do avoid this. Any help will be greatly apreciated 😅
 
 
 ## License
