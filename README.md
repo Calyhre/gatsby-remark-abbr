@@ -1,4 +1,4 @@
-🎩 Gatsby-Remark-abbr
+🎩 gatsby-remark-abbr
 ======
 
 Add abbreviation syntax support to Gatsby.
@@ -54,12 +54,14 @@ And it'll be converted to:
 4. You can now enjoy markdown abbreviation syntax 🎉
 
 
-## Todo:
+## Todo
 
-Currently, [some code](src/index.js#L4-L57) is duplicated between [remark-abbr] and this plugin. I haven't figured it out yet how to do avoid this. Any help will be greatly apreciated 😅
+Currently, [some code] is duplicated between [remark-abbr] and this plugin. I haven't figured it out yet how to do avoid this. Any help will be greatly apreciated 😅
 
 
 ## License
+
 It's a wrapper around [remark-abbr] plugin, which is under MIT license.
 
+[some code]: src/index.js#L4-L57
 [remark-abbr]: https://github.com/zestedesavoir/zmarkdown/tree/master/packages/remark-abbr
