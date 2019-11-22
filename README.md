@@ -1,5 +1,4 @@
-🎩 gatsby-remark-abbr
-======
+# 🎩 gatsby-remark-abbr
 
 Add abbreviation syntax support to Gatsby.
 
@@ -9,55 +8,72 @@ With this plugin, you'll be able to write in your Markdown pages:
 The HTML specification
 is maintained by the W3C.
 
-*[HTML]: Hyper Text Markup Language
-*[W3C]:  World Wide Web Consortium
+_[HTML]: Hyper Text Markup Language
+_[W3C]: World Wide Web Consortium
 ```
 
 And it'll be converted to:
 
 ```html
 <p>
-  The <abbr title="Hyper Text Markup Language">HTML</abbr> specification
-  is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
+  The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is
+  maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
 </p>
 ```
-
 
 ## Installation
 
 1. Add the package to your project:
-  - With `yarn`:
-    ```shell
-    yarn add gatsby-remark-abbr
-    ```
-  - With `npm`:
-    ```shell
-    npm install gatsby-remark-abbr
-    ```
+
+- With `yarn`:
+  ```shell
+  yarn add gatsby-remark-abbr
+  ```
+- With `npm`:
+  ```shell
+  npm install gatsby-remark-abbr
+  ```
 
 2. Add those few lines into your `gatsby-config.js`:
-  ```diff
-      module.exports = {
-        plugins: [
-          {
-            resolve: 'gatsby-transformer-remark',
-            options: {
-  +           plugins: [
-  +             'gatsby-remark-abbr',
-  +           ],
-            },
+
+```diff
+    module.exports = {
+      plugins: [
+        {
+          resolve: 'gatsby-transformer-remark',
+          options: {
++           plugins: [
++             'gatsby-remark-abbr',
++           ],
           },
-      };
-  ```
+        },
+    };
+```
 
 3. Delete `.cache/` and reboot `gatsby`
 4. You can now enjoy markdown abbreviation syntax 🎉
 
+## Options
 
-## Todo
+Options can be passed to `remark-abbr`, check out [their full available list](https://github.com/zestedesavoir/zmarkdown/tree/master/packages/remark-abbr#options) to see what is available:
 
-Currently, [some code] is duplicated between [remark-abbr] and this plugin. I haven't figured it out yet how to do avoid this. Any help will be greatly apreciated 😅
-
+```diff
+    module.exports = {
+      plugins: [
+        {
+          resolve: 'gatsby-transformer-remark',
+          options: {
+            plugins: [
+-             'gatsby-remark-abbr',
++             {
++               resolve: 'gatsby-remark-abbr',
++               options: { expandFirst: true }
++             },
+            ],
+          },
+        },
+    };
+```
 
 ## License
 
