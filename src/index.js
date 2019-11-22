@@ -43,7 +43,7 @@ function replace(abbrs) {
       // Replace abbreviations
       for (let i = 0; i < newTexts.length; i++) {
         const content = newTexts[i];
-        if (abbrs.hasOwnProperty(content)) {
+        if (Object.prototype.hasOwnProperty.call(abbrs, content)) {
           node.children.splice(c + i, 0, abbrs[content]);
         } else {
           node.children.splice(c + i, 0, {
