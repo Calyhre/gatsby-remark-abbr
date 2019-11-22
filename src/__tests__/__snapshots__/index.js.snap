@@ -7,7 +7,11 @@ Object {
       "children": Array [
         Object {
           "type": "text",
-          "value": "This plugin works on ",
+          "value": "This plugin works on",
+        },
+        Object {
+          "type": "text",
+          "value": " ",
         },
         Object {
           "abbr": "MDAST",
@@ -38,11 +42,20 @@ Object {
               "offset": 102,
             },
           },
+          "reference": "Markdown Abstract Syntax Tree.",
           "type": "abbr",
         },
         Object {
           "type": "text",
-          "value": ", a Markdown ",
+          "value": "",
+        },
+        Object {
+          "type": "text",
+          "value": ", a Markdown",
+        },
+        Object {
+          "type": "text",
+          "value": " ",
         },
         Object {
           "abbr": "AST",
@@ -71,7 +84,12 @@ Object {
               "offset": 143,
             },
           },
+          "reference": "Abstract syntax tree",
           "type": "abbr",
+        },
+        Object {
+          "type": "text",
+          "value": "",
         },
         Object {
           "type": "text",
@@ -139,6 +157,277 @@ implemented by ",
       "column": 29,
       "line": 5,
       "offset": 171,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark abbr plugin renders abbr nodes properly with options 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "text",
+          "value": "The",
+        },
+        Object {
+          "type": "text",
+          "value": " ",
+        },
+        Object {
+          "type": "text",
+          "value": "Hyper Text Markup Language ",
+        },
+        Object {
+          "type": "text",
+          "value": "(",
+        },
+        Object {
+          "abbr": "HTML",
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "HTML",
+            },
+          ],
+          "data": Object {
+            "hName": "abbr",
+            "hProperties": Object {
+              "title": "Hyper Text Markup Language",
+            },
+          },
+          "position": Position {
+            "end": Object {
+              "column": 1,
+              "line": 7,
+              "offset": 136,
+            },
+            "indent": Array [
+              1,
+            ],
+            "start": Object {
+              "column": 1,
+              "line": 6,
+              "offset": 100,
+            },
+          },
+          "reference": "Hyper Text Markup Language",
+          "type": "abbr",
+        },
+        Object {
+          "type": "text",
+          "value": "",
+        },
+        Object {
+          "type": "text",
+          "value": ")",
+        },
+        Object {
+          "type": "text",
+          "value": "",
+        },
+        Object {
+          "type": "text",
+          "value": " specification is maintained by the",
+        },
+        Object {
+          "type": "text",
+          "value": " ",
+        },
+        Object {
+          "type": "text",
+          "value": "World Wide Web Consortium ",
+        },
+        Object {
+          "type": "text",
+          "value": "(",
+        },
+        Object {
+          "abbr": "W3C",
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "W3C",
+            },
+          ],
+          "data": Object {
+            "hName": "abbr",
+            "hProperties": Object {
+              "title": "World Wide Web Consortium",
+            },
+          },
+          "position": Position {
+            "end": Object {
+              "column": 34,
+              "line": 7,
+              "offset": 169,
+            },
+            "indent": Array [],
+            "start": Object {
+              "column": 1,
+              "line": 7,
+              "offset": 136,
+            },
+          },
+          "reference": "World Wide Web Consortium",
+          "type": "abbr",
+        },
+        Object {
+          "type": "text",
+          "value": "",
+        },
+        Object {
+          "type": "text",
+          "value": ")",
+        },
+        Object {
+          "type": "text",
+          "value": "",
+        },
+        Object {
+          "type": "text",
+          "value": ".",
+        },
+      ],
+      "position": Position {
+        "end": Object {
+          "column": 49,
+          "line": 1,
+          "offset": 48,
+        },
+        "indent": Array [],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "type": "text",
+          "value": "The",
+        },
+        Object {
+          "type": "text",
+          "value": " ",
+        },
+        Object {
+          "abbr": "HTML",
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "HTML",
+            },
+          ],
+          "data": Object {
+            "hName": "abbr",
+            "hProperties": Object {
+              "title": "Hyper Text Markup Language",
+            },
+          },
+          "position": Position {
+            "end": Object {
+              "column": 1,
+              "line": 7,
+              "offset": 136,
+            },
+            "indent": Array [
+              1,
+            ],
+            "start": Object {
+              "column": 1,
+              "line": 6,
+              "offset": 100,
+            },
+          },
+          "reference": "Hyper Text Markup Language",
+          "type": "abbr",
+        },
+        Object {
+          "type": "text",
+          "value": "",
+        },
+        Object {
+          "type": "text",
+          "value": " specification
+is maintained by the",
+        },
+        Object {
+          "type": "text",
+          "value": " ",
+        },
+        Object {
+          "abbr": "W3C",
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "W3C",
+            },
+          ],
+          "data": Object {
+            "hName": "abbr",
+            "hProperties": Object {
+              "title": "World Wide Web Consortium",
+            },
+          },
+          "position": Position {
+            "end": Object {
+              "column": 34,
+              "line": 7,
+              "offset": 169,
+            },
+            "indent": Array [],
+            "start": Object {
+              "column": 1,
+              "line": 7,
+              "offset": 136,
+            },
+          },
+          "reference": "World Wide Web Consortium",
+          "type": "abbr",
+        },
+        Object {
+          "type": "text",
+          "value": "",
+        },
+        Object {
+          "type": "text",
+          "value": ".",
+        },
+      ],
+      "position": Position {
+        "end": Object {
+          "column": 26,
+          "line": 4,
+          "offset": 98,
+        },
+        "indent": Array [
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 50,
+        },
+      },
+      "type": "paragraph",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 34,
+      "line": 7,
+      "offset": 169,
     },
     "start": Object {
       "column": 1,

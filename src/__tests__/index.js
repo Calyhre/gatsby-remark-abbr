@@ -1,7 +1,7 @@
 const Remark = require('remark');
 const dedent = require('dedent');
 
-const plugin = require('../index');
+const remarkAbbrPlugin = require('../index');
 
 describe('remark abbr plugin', () => {
   it('renders abbr nodes properly', () => {
@@ -13,12 +13,39 @@ describe('remark abbr plugin', () => {
       *[AST]: Abstract syntax tree
     `;
 
-    const markdownAST = plugin
+    const markdownAST = remarkAbbrPlugin
       .setParserPlugins()
-      .reduce((remark, plugin) => remark.use(plugin), new Remark())
+      .reduce(
+        (remark, [plugin, pluginOptions]) => remark.use(plugin, pluginOptions),
+        new Remark()
+      )
       .parse(markdownText);
 
-    plugin({ markdownAST });
+    remarkAbbrPlugin({ markdownAST });
+
+    expect(markdownAST).toMatchSnapshot();
+  });
+
+  it('renders abbr nodes properly with options', () => {
+    const markdownText = dedent`
+      The HTML specification is maintained by the W3C.
+
+      The HTML specification
+      is maintained by the W3C.
+
+      *[HTML]: Hyper Text Markup Language
+      *[W3C]: World Wide Web Consortium
+    `;
+
+    const markdownAST = remarkAbbrPlugin
+      .setParserPlugins({ expandFirst: true })
+      .reduce(
+        (remark, [plugin, pluginOptions]) => remark.use(plugin, pluginOptions),
+        new Remark()
+      )
+      .parse(markdownText);
+
+    remarkAbbrPlugin({ markdownAST });
 
     expect(markdownAST).toMatchSnapshot();
   });
