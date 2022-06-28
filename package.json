@@ -7,7 +7,7 @@
   "author": "Charley DAVID <hello@calyh.re>",
   "license": "MIT",
   "dependencies": {
-    "remark-abbr": "^1.0.7"
+    "remark-abbr": "^1.4.1"
   },
   "keywords": [
     "gatsby",
@@ -23,7 +23,7 @@
     "dedent": "^0.7.0",
     "eslint": "^6.6.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "gatsby-transformer-remark": "<= 3",
+    "gatsby-transformer-remark": "^5.17.0",
     "jest": "^24.9.0",
     "prettier": "^1.19.1"
   },
@@ -37,6 +37,7 @@
     "verbose": true
   },
   "peerDependencies": {
-    "gatsby-transformer-remark": "<= 3"
+    "gatsby": "4.0.0",
+    "gatsby-transformer-remark": "5.17.0"
   }
 }
